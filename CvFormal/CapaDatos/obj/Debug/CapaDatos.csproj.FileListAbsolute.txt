@@ -1,0 +1,4 @@
+C:\Users\jamilumish\Desktop\CVFormal01\CVFormal01\CapaDatos\bin\Debug\CapaDatos.dll
+C:\Users\jamilumish\Desktop\CVFormal01\CVFormal01\CapaDatos\bin\Debug\CapaDatos.pdb
+C:\Users\jamilumish\Desktop\CVFormal01\CVFormal01\CapaDatos\obj\Debug\CapaDatos.dll
+C:\Users\jamilumish\Desktop\CVFormal01\CVFormal01\CapaDatos\obj\Debug\CapaDatos.pdb

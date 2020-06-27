@@ -1,0 +1,9 @@
+C:\Users\jamilumish\Desktop\CVFormal01\CVFormal01\CapaNegocios\bin\Debug\CapaNegocios.dll
+C:\Users\jamilumish\Desktop\CVFormal01\CVFormal01\CapaNegocios\bin\Debug\CapaNegocios.pdb
+C:\Users\jamilumish\Desktop\CVFormal01\CVFormal01\CapaNegocios\bin\Debug\CapaDatos.dll
+C:\Users\jamilumish\Desktop\CVFormal01\CVFormal01\CapaNegocios\bin\Debug\CapaEntidades.dll
+C:\Users\jamilumish\Desktop\CVFormal01\CVFormal01\CapaNegocios\bin\Debug\CapaDatos.pdb
+C:\Users\jamilumish\Desktop\CVFormal01\CVFormal01\CapaNegocios\bin\Debug\CapaEntidades.pdb
+C:\Users\jamilumish\Desktop\CVFormal01\CVFormal01\CapaNegocios\obj\Debug\CapaNegocios.csprojResolveAssemblyReference.cache
+C:\Users\jamilumish\Desktop\CVFormal01\CVFormal01\CapaNegocios\obj\Debug\CapaNegocios.dll
+C:\Users\jamilumish\Desktop\CVFormal01\CVFormal01\CapaNegocios\obj\Debug\CapaNegocios.pdb

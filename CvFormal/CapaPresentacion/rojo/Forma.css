@@ -1,0 +1,78 @@
+﻿#cabeza{
+    background-color: rgb(148, 10, 10);
+    color: blanchedalmond;
+}
+#cabeza .logo{
+    font-size: 40px;
+    padding: 5px 10px;
+}
+#cabeza a{
+    display: block;
+    background-color: rgb(180, 39, 39);
+    color: cornsilk;
+    text-align: center;
+    padding: 10px;
+    margin: 10px auto;
+}
+#cabeza a:hover{
+    background-color: rgb(255, 224, 224);
+    color: crimson;
+}
+#cabeza p{
+    display: block;
+    background-color: rgb(104, 21, 21);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin: 10px auto;
+}
+#cuerpo{
+    min-height: 460px;
+    margin-top: 30px;
+}
+#cuerpo h1{
+    text-align: center;
+    color: red;
+}
+#cuerpo .a1{
+    display: block;
+    background-color: rgb(25, 64, 238);
+    color: cornsilk;
+    text-align: center;
+    padding: 30px;
+    margin: 10px auto;
+    font-size: 20px;
+}
+#cuerpo .a1:hover{
+    background-color: rgb(143, 214, 255);
+    color: rgb(18, 61, 179);
+}
+#cuerpo .btn{
+    width: 90%;
+}
+#derechos{
+    background-color: rgb(104, 21, 21);
+    color: blanchedalmond;
+    text-align: center;
+    padding: 20px;
+}
+#autor{
+    background-color: rgb(128, 32, 32);
+    color: bisque;
+}
+#autor .autor1, #autor .autor2{
+    padding: 10px;
+}
+#autor .autor2{
+    background-color: rgb(150, 32, 32);
+}
+#autor p{
+    text-align: center;
+    margin: 0;
+}
+#pie{
+    background-color: rgb(75, 14, 14);
+    color: blanchedalmond;
+    text-align: center;
+    padding: 20px;
+}

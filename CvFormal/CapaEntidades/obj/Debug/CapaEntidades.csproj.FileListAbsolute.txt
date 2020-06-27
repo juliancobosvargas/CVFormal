@@ -1,0 +1,5 @@
+C:\Users\jamilumish\Desktop\CVFormal01\CVFormal01\CapaEntidades\bin\Debug\CapaEntidades.dll
+C:\Users\jamilumish\Desktop\CVFormal01\CVFormal01\CapaEntidades\bin\Debug\CapaEntidades.pdb
+C:\Users\jamilumish\Desktop\CVFormal01\CVFormal01\CapaEntidades\obj\Debug\CapaEntidades.csprojResolveAssemblyReference.cache
+C:\Users\jamilumish\Desktop\CVFormal01\CVFormal01\CapaEntidades\obj\Debug\CapaEntidades.dll
+C:\Users\jamilumish\Desktop\CVFormal01\CVFormal01\CapaEntidades\obj\Debug\CapaEntidades.pdb
