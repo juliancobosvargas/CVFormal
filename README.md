@@ -1,2 +1,3 @@
 # CVFormal
-Crupo Rojo
+Grupo Rojo
+2020/06/26
