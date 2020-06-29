@@ -175,7 +175,7 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap.min.css.map" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="Privado\Cuenta.aspx" />
+    <Content Include="Privado\frmActualizarContra.aspx" />
     <Content Include="Privado\frmCorreo.aspx" />
     <Content Include="Privado\frmCuenta.aspx" />
     <Content Include="Privado\frmDato.aspx" />
@@ -310,12 +310,12 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Privado\Cuenta.aspx.cs">
-      <DependentUpon>Cuenta.aspx</DependentUpon>
+    <Compile Include="Privado\frmActualizarContra.aspx.cs">
+      <DependentUpon>frmActualizarContra.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Privado\Cuenta.aspx.designer.cs">
-      <DependentUpon>Cuenta.aspx</DependentUpon>
+    <Compile Include="Privado\frmActualizarContra.aspx.designer.cs">
+      <DependentUpon>frmActualizarContra.aspx</DependentUpon>
     </Compile>
     <Compile Include="Privado\frmCorreo.aspx.cs">
       <DependentUpon>frmCorreo.aspx</DependentUpon>

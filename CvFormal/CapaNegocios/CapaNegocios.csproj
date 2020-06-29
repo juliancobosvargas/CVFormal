@@ -40,7 +40,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CuentaBL.cs" />
+    <Compile Include="DatoBL.cs" />
     <Compile Include="Iterfaces\ICuenta.cs" />
+    <Compile Include="Iterfaces\IDato.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

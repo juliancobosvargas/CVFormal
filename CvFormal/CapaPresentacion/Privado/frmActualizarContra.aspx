@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="frmCuenta.aspx.cs" Inherits="CapaPresentacion.Privado.frmCuenta" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="frmActualizarContra.aspx.cs" Inherits="CapaPresentacion.Privado.frmActualizarContra" %>
 
 <!DOCTYPE html>
 
@@ -18,7 +18,7 @@
     <link href="../rojo/Forma.css" rel="stylesheet" />
 </head>
 <body>
-    <form id="form1" runat="server">
+<form id="form1" runat="server">
 
         <div id="cabeza">
           <div class="container-fluid">
@@ -60,7 +60,7 @@
                     </div>
                     <div class="col-md-8">
                         <div id="fCuenta">
-                            <h2>Cuenta</h2>
+                            <h2>Actualizar Contraseña</h2>
                             <div class="form-group">
                                 <label for="txtUsuario">Usuario:</label>
                                 <asp:TextBox runat="server" ID="txtUsuario" class="form-control" ReadOnly="True"></asp:TextBox>
@@ -70,14 +70,12 @@
                                 <asp:TextBox runat="server" ID="txtCorreo" type="email" class="form-control" ReadOnly="True"></asp:TextBox>
                             </div>
                             <div class="form-group">
-                                <label for="txtSeudonimo">Seudonimo:</label>
-                                <asp:TextBox runat="server" ID="txtSeudonimo" class="form-control"></asp:TextBox>
-                                <asp:Button ID="btnActualizarSeudo" runat="server" Text="Cambiar Sudonimo" class="btn btn-primary" OnClick="btnActualizarSeudo_Click"/>
+                                <label for="txtContrasena">NuevaContraseña:</label>
+                                <asp:TextBox runat="server" ID="txtContrasena" type="password" class="form-control" TextMode="Password"></asp:TextBox>
                             </div>
                             <div class="form-group">
-                                <label for="txtPrivacidad">Privacidad:</label>
-                                <asp:TextBox runat="server" ID="txtPrivacidad" type="password" class="form-control"></asp:TextBox>
-                                <asp:Button ID="btnActualizarPriva" runat="server" Text="Cambiar Codigo de Privacidad" class="btn btn-primary" OnClick="btnActualizarPriva_Click"/>
+                                <label for="txtConfirma">Confirma Contraseña:</label>
+                                <asp:TextBox runat="server" ID="txtConfirma" type="password" class="form-control" TextMode="Password"></asp:TextBox>
                             </div>
                             <div class="form-group">
                             <asp:Button ID="btnActualizarContra" runat="server" Text="Actualizar Contraseña" class="btn btn-success" OnClick="btnActualizarContra_Click"/>

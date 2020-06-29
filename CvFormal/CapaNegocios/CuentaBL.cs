@@ -46,8 +46,18 @@ namespace CapaNegocios
             }
         }
 
+        //me devuelve una fila
+        public DataRow Informacion(int codCuenta)
+        {
+            DataRow fila = datos.TraerDataRow("spInfoCuenta", codCuenta);
+            if (fila.ItemArray.Length == 2)
+            {
+                mensaje = fila["Mensaje"].ToString();
+            }
+            return fila;
+        }
 
-
+        /*
         // Declarar una propiedad de lectura para miCuenta
         private Cuenta miCuenta;
         public Cuenta MiCuenta
@@ -91,7 +101,7 @@ namespace CapaNegocios
                 return true;
             }
         }
-
+        
         public DataTable Listar(int codCuenta)
         {
             DataTable tabla = datos.TraerDataTable("spListarCuenta", codCuenta);
@@ -103,10 +113,10 @@ namespace CapaNegocios
                     DataRow fila = tabla.Rows.Find(0);
                     codigoCuenta = Convert.ToInt32(fila["CodCuenta"]);
                 }
-            }*/
+            }
             return tabla;
         }
-
+*/
         public bool Agregar(Cuenta cuenta)
         {
             DataRow fila = datos.TraerDataRow("spAgregarCuenta", cuenta._CorreoSeguro, cuenta._Usuario, cuenta._Contrasena, cuenta._Registro);
@@ -125,9 +135,18 @@ namespace CapaNegocios
             else return false;
         }
 
+        public bool Reactivar(int codCuenta)
+        {
+            DataRow fila = datos.TraerDataRow("spReaActivarCuenta", codCuenta);
+            mensaje = fila["Mensaje"].ToString();
+            byte Respuesta = Convert.ToByte(fila["Respuesta"]);
+            if (Respuesta == 0) return true;
+            else return false;
+        }
+
         public bool ActualizarContra(int codCuenta, string contra)
         {
-            DataRow fila = datos.TraerDataRow("spActualizarContra", codCuenta, contra);
+            DataRow fila = datos.TraerDataRow("spActualizarCuentaContra", codCuenta, contra);
             mensaje = fila["Mensaje"].ToString();
             byte Respuesta = Convert.ToByte(fila["Respuesta"]);
             if (Respuesta == 0) return true;
@@ -136,7 +155,7 @@ namespace CapaNegocios
 
         public bool ActualizarSeudo(int codCuenta, string seudo)
         {
-            DataRow fila = datos.TraerDataRow("spActualizarSeudo", codCuenta, seudo);
+            DataRow fila = datos.TraerDataRow("spActualizarCuentaSeudo", codCuenta, seudo);
             mensaje = fila["Mensaje"].ToString();
             byte Respuesta = Convert.ToByte(fila["Respuesta"]);
             if (Respuesta == 0) return true;
@@ -145,17 +164,12 @@ namespace CapaNegocios
 
         public bool ActualizarPriva(int codCuenta, string priva)
         {
-            DataRow fila = datos.TraerDataRow("spActualizarPriva", codCuenta, priva);
+            DataRow fila = datos.TraerDataRow("spActualizarCuentaPriva", codCuenta, priva);
             mensaje = fila["Mensaje"].ToString();
             byte Respuesta = Convert.ToByte(fila["Respuesta"]);
             if (Respuesta == 0) return true;
             else return false;
         }
 
-
-
-
-
-        
     }
 }

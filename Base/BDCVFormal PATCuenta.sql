@@ -73,6 +73,9 @@ go
 --ejecutar
 execute spInfoCuenta 1
 go
+--si suenta esta inactiva
+execute spInfoCuenta 8
+go
 
 -----------------------------------------------------------------
 if OBJECT_ID('spAgregarCuenta') is not null
@@ -175,7 +178,7 @@ end
 go
 --Ejecuta
 select * from TCuenta
-exec spDesencriptarCuenta 2
+exec spDesencriptarCuenta 1
 go
 select * from TCuenta
 --Un detalle cuando Encriptas se genera un codigo diferente cada vez
@@ -230,7 +233,7 @@ end
 go
 --ejecutar
 select *from TCuenta
-exec spActualizarCuentaSeudo 2,'Seudo1'
+exec spActualizarCuentaSeudo 1,'Seudo2'
 go
 select *from TCuenta
 

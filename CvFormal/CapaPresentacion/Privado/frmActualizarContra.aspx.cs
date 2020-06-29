@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+
 //capas
 using CapaNegocios;
 using CapaEntidades;
@@ -11,7 +12,7 @@ using System.Data;
 
 namespace CapaPresentacion.Privado
 {
-    public partial class frmDato : System.Web.UI.Page
+    public partial class frmActualizarContra : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -19,21 +20,14 @@ namespace CapaPresentacion.Privado
             {
                 if (Session["usuario"] != null && Session["codigo"] != null)
                 {
-                    //codcuenta:
+                    txtUsuario.Text = (string)Session["usuario"];
+                    CuentaBL cuentaBl = new CuentaBL();
                     int codigo = (int)Session["codigo"];
-                    DatoBL datoBl = new DatoBL();
-                    DataRow fila = datoBl.Informacion(codigo);
+                    //info de la cuenta
+                    DataRow fila = cuentaBl.Informacion(codigo);
                     if (fila.ItemArray.Length > 2)
                     {
-                        txtApellidos.Text = fila["Apellidos"].ToString();
-                        txtNombres.Text = fila["Nombres"].ToString();
-                        txtDNI.Text = fila["Dni"].ToString();
-                        txtDireccion.Text = fila["Direccion"].ToString();
-                        txtInformacion.Text = fila["Informacion"].ToString();
-
-                        //nacimiento
-                        Calendario.SelectedDate = Convert.ToDateTime(fila["Nacimiento"]);
-                        txtNacimiento.Text = fila["Nacimiento"].ToString();
+                        txtCorreo.Text = fila["CorreoSeguro"].ToString();
                     }
                 }
                 else
@@ -42,6 +36,7 @@ namespace CapaPresentacion.Privado
                 }
             }
         }
+
         protected void btnCuenta_Click(object sender, EventArgs e)
         {
             Response.Redirect("frmCuenta.aspx");
@@ -82,38 +77,20 @@ namespace CapaPresentacion.Privado
             Response.Redirect("frmRedSocial.aspx");
         }
 
-        //calendario
-        protected void DateChange(object sender, EventArgs e)
+        //actualizo contra
+        protected void btnActualizarContra_Click(object sender, EventArgs e)
         {
-            txtNacimiento.Text = Calendario.SelectedDate.ToShortDateString();
-        }
-
-        //Agregar o Actualizar Dato
-        protected void btnActualizar_Click(object sender, EventArgs e)
-        {
-            int codigo = (int)Session["codigo"];
-            DatoBL datoBl = new DatoBL();
-            Dato nuevoDato = new Dato();
-            nuevoDato._Apellidos = txtApellidos.Text.Trim();
-            nuevoDato._Nombres = txtNombres.Text.Trim();
-            try
+            if (txtContrasena.Text == txtConfirma.Text)
             {
-                String fecha = txtNacimiento.Text.Trim();
-                nuevoDato._Nacimiento = Convert.ToDateTime(fecha);
+                int codigo = (int)Session["codigo"];
+                CuentaBL cuentaBl = new CuentaBL();
+                cuentaBl.ActualizarContra(codigo, txtContrasena.Text);
+                Response.Write("<script>alert('" + cuentaBl.Mensaje + "');</script>");
             }
-            catch (Exception ex)
+            else
             {
-                throw ex;
+                Response.Write("<script>alert('Contraseña no Coincide');</script>");
             }
-            nuevoDato._Dni = txtDNI.Text.Trim();
-            nuevoDato._Direccion = txtDireccion.Text.Trim();
-            nuevoDato._Informacion = txtInformacion.Text.Trim();
-            //debo darle el CodCuenta que tiene como ForenKey
-            nuevoDato._CodCuenta = codigo;
-            datoBl.AgregarActualizar(nuevoDato);
-            Response.Write("<script>alert('" + datoBl.Mensaje + "');</script>");
         }
-
-
     }
 }

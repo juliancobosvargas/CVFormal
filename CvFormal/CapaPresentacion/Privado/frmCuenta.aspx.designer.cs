@@ -139,6 +139,15 @@ namespace CapaPresentacion.Privado {
         protected global::System.Web.UI.WebControls.TextBox txtSeudonimo;
         
         /// <summary>
+        /// Control btnActualizarSeudo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnActualizarSeudo;
+        
+        /// <summary>
         /// Control txtPrivacidad.
         /// </summary>
         /// <remarks>
@@ -148,12 +157,21 @@ namespace CapaPresentacion.Privado {
         protected global::System.Web.UI.WebControls.TextBox txtPrivacidad;
         
         /// <summary>
-        /// Control btnActualizarCuenta.
+        /// Control btnActualizarPriva.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnActualizarCuenta;
+        protected global::System.Web.UI.WebControls.Button btnActualizarPriva;
+        
+        /// <summary>
+        /// Control btnActualizarContra.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnActualizarContra;
     }
 }

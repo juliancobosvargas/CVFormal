@@ -69,9 +69,11 @@
                                 <label for="txtNombres">Nombres:</label>
                                 <asp:TextBox runat="server" ID="txtNombres" class="form-control"></asp:TextBox>
                             </div>
+                            <!-- Fecha de Nacimiento -->
                             <div class="form-group">
                                 <label for="txtNacimiento">Nacimiento:</label>
                                 <asp:TextBox runat="server" ID="txtNacimiento" class="form-control"></asp:TextBox>
+                                <asp:Calendar ID="Calendario" runat="server" OnSelectionChanged="DateChange"></asp:Calendar>
                             </div>
                             <div class="form-group">
                                 <label for="txtDNI">DNI:</label>
@@ -84,9 +86,11 @@
                             <div class="form-group">
                                 <label for="txtInformacion">Informacion:</label>
                                 <asp:TextBox runat="server" ID="txtInformacion" class="form-control" TextMode="MultiLine"></asp:TextBox>
-
                             </div>
-                            <asp:Button ID="Button1" runat="server" Text="Actualizar" class="btn btn-primary"/>
+                            <!-- Botones -->
+                            <div class="form-group">
+                            <asp:Button ID="btnActualizar" runat="server" Text="Actualizar" class="btn btn-primary" OnClick="btnActualizar_Click"/>
+                            </div>
                         </div>
                     </div>
                 </div>
